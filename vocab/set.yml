@@ -1,0 +1,22 @@
+"$schema": https://json-schema.org/draft/2019-09/schema
+"$id": https://schemas.unth.net/vocab/set
+"$vocabulary":
+  "https://schemas.unth.net/vocab/set": true
+"$recursiveAnchor": true
+title: Set vocabulary meta-schema
+properties:
+  set:
+    description:
+      if the `set` keyword value is true, an array instance of the schema is considered to be a [Set](https://en.wikipedia.org/wiki/Set_(mathematics)).
+
+      this has the implication that the order of array elements is not significant, and that any duplicate elements may be removed.
+
+      if the array can be represented as a data type which embodies a mathematical set, such as Python's [set or frozenset](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset) or Ruby's [Set](https://ruby-doc.org/stdlib/libdoc/set/rdoc/Set.html), implementations should use such a data type for the instance.
+
+      this keyword produces an annotation result whose value is the value of the keyword.
+
+      this keyword produces no assertions.
+
+      this keyword has no effect if the instance is not of type array.
+    type: boolean
+    default: false
